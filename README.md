@@ -9,6 +9,11 @@ Kafka brokers as a service.
 
 Note:  This has only been tested on Ubuntu 12.04 LTS.
 
+## Prebuilt .deb
+You can download a prebuild Kafka 0.7.2 .deb from the
+[Downloads page](https://github.com/wmf-analytics/kafka-debian/downloads) here:
+[kafka_0.7.2_all.deb](https://github.com/downloads/wmf-analytics/kafka-debian/kafka_0.7.2_all.deb)
+
 ## Instructions
 - [Download](http://incubator.apache.org/kafka/downloads.html) Apache Kafka:
 
