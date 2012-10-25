@@ -1,2 +1,2 @@
 etc/kafka usr/lib/kafka/config
-etc/init.d/kafka lib/init/upstart-job
+lib/init/upstart-job etc/init.d/kafka
