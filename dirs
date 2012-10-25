@@ -1,0 +1,4 @@
+/usr/lib/kafka
+/etc/kafka
+/var/log/kafka
+/etc/init

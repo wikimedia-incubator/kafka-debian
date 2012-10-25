@@ -1,0 +1,37 @@
+#!/usr/bin/make -f
+
+# Get the java home directory for the version of java we are using
+JAVA_HOME := $(shell /usr/sbin/update-java-alternatives --list | cut -d ' ' -f 3)
+
+binary: install
+	dh_installchangelogs
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+clean:
+	dh_clean
+
+build:
+	dh_testdir
+	dh_testroot
+	dh_prep
+
+	# Kafka has already been updated and packaged by
+	# the ./sbt script.  Nothing to do but install.
+	# See: http://incubator.apache.org/kafka/quickstart.html
+
+install: build
+	dh_installdirs
+	# install into /usr/lib/kafka
+	$(CURDIR)/debian/install.sh $(CURDIR) $(CURDIR)/debian/kafka/usr/lib/kafka
+	# install config files into /etc/kafka
+	cp $(CURDIR)/config/* $(CURDIR)/debian/kafka/etc/kafka/
+
+	# create symlinks defined in debian/links
+	dh_link
+
+	# install upstart init file
+	cp $(CURDIR)/debian/kafka.upstart.conf $(CURDIR)/debian/kafka/etc/init/kafka.conf
+

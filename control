@@ -1,0 +1,15 @@
+Source: kafka
+Priority: extra
+Maintainer: Andrew Otto <otto@wikimedia.org>
+Build-Depends: debhelper (>= 8.0.0), javahelper (>=0.25)
+Build-Depends-Indep: default-jdk | sun-java6-jdk
+Standards-Version: 3.9.2
+Section: utils
+Homepage: http://incubator.apache.org/kafka/
+
+Package: kafka
+Architecture: all
+Depends: ${misc:Depends}, upstart
+Description: Apache Kafka is a distributed publish-subscribe messaging system.
+ Kafka provides a publish-subscribe solution that can handle all activity
+ stream data and processing on a consumer-scale web site.

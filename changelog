@@ -1,0 +1,5 @@
+kafka (0.7.2) stable; urgency=low
+
+  * Initial Debian packaging.
+
+ -- Andrew Otto (WMF) <otto@wikimedia.org>  Wed, 24 Oct 2012 19:38:12 +0000
