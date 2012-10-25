@@ -39,9 +39,5 @@ If all goes well, you will have a ```kafka_0.7.2_all.deb``` package.
 Run this as a single command to do all of the above steps at once:
 
 ```bash
-wget http://apache.petsads.us/incubator/kafka/kafka-0.7.2-incubating/kafka-0.7.2-incubating-src.tgz && \ 
-  tar -xzf kafka-0.7.2-incubating-src.tgz && \
-  cd kafka-0.7.2-incubating-src && \
-  git clone https://github.com/wmf-analytics/kafka-debian.git ./debian && \
-  debian/buildpackage.sh
+wget http://apache.petsads.us/incubator/kafka/kafka-0.7.2-incubating/kafka-0.7.2-incubating-src.tgz && tar -xzf kafka-0.7.2-incubating-src.tgz && cd kafka-0.7.2-incubating-src &&git clone https://github.com/wmf-analytics/kafka-debian.git ./debian && debian/buildpackage.sh
 ```
