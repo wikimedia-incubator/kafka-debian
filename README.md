@@ -11,24 +11,33 @@ Note:  This has only been tested on Ubuntu 12.04 LTS.
 
 ## Instructions
 - [Download](http://incubator.apache.org/kafka/downloads.html) Apache Kafka:
+
 ```bash
 wget http://apache.petsads.us/incubator/kafka/kafka-0.7.2-incubating/kafka-0.7.2-incubating-src.tgz
 ```
+
 - Unzip the source:
+
 ```bash
 tar -xzf kafka-0.7.2-incubating-src.tgz 
 ```
+
 - Clone this respository into a debian/ directory
-```basn
+
+```bash
 cd kafka-0.7.2-incubating-src && git clone https://github.com/wmf-analytics/kafka-debian.git ./debian
+```
+
 - Run the buildpackage.sh script
+
 ```bash
 debian/buildpackage.sh
 ```
 
-If all goes well, you will have a kafka_0.7.2_all.deb package.
+If all goes well, you will have a ```kafka_0.7.2_all.deb``` package.
 
 Run this as a single command to do all of the above steps at once:
+
 ```bash
 wget http://apache.petsads.us/incubator/kafka/kafka-0.7.2-incubating/kafka-0.7.2-incubating-src.tgz && \ 
   tar -xzf kafka-0.7.2-incubating-src.tgz && \
